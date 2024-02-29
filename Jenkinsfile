@@ -9,10 +9,10 @@ pipeline {
 		stage('Test') { 
             steps {
 			
-			    bat 
-                  'cd jenkins/scripts  
-                  start test.batch'				  
-                 
+			    bat """
+                   cd jenkins/scripts  
+                   test.batch				  
+                 """
 			   
             }
         }
