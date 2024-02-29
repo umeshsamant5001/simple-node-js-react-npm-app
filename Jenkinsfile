@@ -8,7 +8,8 @@ pipeline {
         }
 		stage('Test') { 
             steps {
-                bat '/jenkins/scripts/test' 
+			    cd  'jenkins\scripts'
+                start 'test.batch' 
             }
         }
     }
