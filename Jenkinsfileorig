@@ -6,6 +6,16 @@ pipeline {
                 bat 'npm install' 
             }
         }
+		stage('Test') { 
+            steps {
+			
+			    bat """
+                   cd jenkins/scripts  
+                   test.batch				  
+                 """
+			   
+            }
+        }
 		stage('Deliver') {
             steps {
 			    bat """
