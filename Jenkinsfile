@@ -10,7 +10,7 @@ pipeline {
             steps {
 			
 			    bat 
-                  'cd jenkins\scripts  
+                  'cd jenkins/scripts  
                   start test.batch'				  
                  
 			   
