@@ -8,10 +8,8 @@ pipeline {
         }
 		stage('Deliver') {
             steps {
-			    bat """
-                   cd jenkins/scripts  
-				   deliver.batch
-				 """
+			    bat 'npm run build'
+				bat 'npm start'
                   
             }
         }
