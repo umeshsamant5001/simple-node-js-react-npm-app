@@ -16,5 +16,14 @@ pipeline {
 			   
             }
         }
+		stage('Deliver') {
+            steps {
+			    bat """
+                   cd jenkins/scripts  
+				   deliver.batch
+				 """
+                  
+            }
+        }
     }
 }
